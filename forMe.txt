@@ -1,0 +1,42 @@
+Users Table:
+
+UserID (Primary Key)
+Username
+Password (hashed)
+Email
+Role (Admin, Moderator, etc.)
+Booking Table:
+
+BookingID (Primary Key)
+UserID (Foreign Key referencing Users table)
+ResourceID (Foreign Key referencing Resources table)
+StartDateTime
+EndDateTime
+Status (Pending, Confirmed, Cancelled, Completed, etc.)
+Resources Table:
+
+ResourceID (Primary Key)
+ResourceName
+Description
+Capacity
+Location
+Availability (if resources can be temporarily unavailable)
+Booking History Table:
+
+BookingHistoryID (Primary Key)
+BookingID (Foreign Key referencing Booking table)
+Action (Created, Updated, Cancelled, etc.)
+Timestamp
+AdminUserID (Foreign Key referencing Users table)
+Notifications Table:
+
+NotificationID (Primary Key)
+UserID (Foreign Key referencing Users table)
+Message
+Timestamp
+IsRead
+Settings Table:
+
+SettingID (Primary Key)
+SettingName
+SettingValue

@@ -1,0 +1,50 @@
+let {sequelizeCon,DataTypes,Model} = require("../init/dbconfig");
+class Admin extends Model{}
+Admin.init({
+    id:{
+        type:DataTypes.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+        allowNull:false
+    },
+    name:{
+        type:DataTypes.STRING(),
+        allowNull:false
+    },
+    emailID:{
+        type:DataTypes.STRING(),
+        allowNull:false,
+        unique:true
+    },
+    password:{
+        type:DataTypes.STRING(),
+        allowNull:false
+    },
+    role:{
+        type:DataTypes.TINYINT(),
+        allowNull:true
+    },
+    otp:{
+        type:DataTypes.STRING,
+        allowNull:true
+    },
+    token:{
+        type:DataTypes.STRING,
+    },
+    isDeleted:{
+        type:DataTypes.BOOLEAN,
+        defaultValue:false,
+        allowNull:false
+    },
+    isActive:{
+        type:DataTypes.BOOLEAN,
+        defaultValue:true,
+        allowNull:false
+    },
+    updatedBy:{
+        type:DataTypes.INTEGER,
+        allowNull:true
+    }
+},{tableName:"admin",modelName:"Admin",sequelize:sequelizeCon})
+Admin.sync();
+module.exports = {Admin};
