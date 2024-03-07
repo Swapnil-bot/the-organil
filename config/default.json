@@ -1,0 +1,14 @@
+{
+    "port":3005,
+    "mysql":{
+        "host":"localhost",
+        "dialect":"mysql",
+        "username":"root",
+        "password":"",
+        "database":"theorganil"
+    },
+    "mailCrediential":{
+        "user":"swapnilp8313@gmail.com",
+        "pass":"ysdw kvqn txan nsku"
+    }
+}
