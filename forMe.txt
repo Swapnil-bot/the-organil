@@ -6,6 +6,15 @@ Password (hashed)
 Email
 Role (Admin, Moderator, etc.)
 
+category table:
+CategoryID (Primary key)
+UserID
+CategoryName
+isDeleted
+isActive
+
+
+
 Booking Table:
 BookingID (Primary Key)
 UserID (Foreign Key referencing Users table)
