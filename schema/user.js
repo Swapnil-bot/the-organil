@@ -24,6 +24,11 @@ User.init({
         type:DataTypes.BIGINT(10),
         allowNull:true
     },
+    role:{
+        type:DataTypes.TINYINT(),
+        defaultValue:1,
+        allowNull:false
+    },
     otp:{
         type:DataTypes.STRING,
         allowNull:true

@@ -24,7 +24,8 @@ async function auth(req,res,next) {
     req["userData"] = {
         id:user.id,
         name:user.name,
-        email:user.emailID
+        email:user.emailID,
+        role:user.role
     }
     //  If all checks pass then move to next middleware
     next()

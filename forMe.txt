@@ -5,8 +5,8 @@ Username
 Password (hashed)
 Email
 Role (Admin, Moderator, etc.)
-Booking Table:
 
+Booking Table:
 BookingID (Primary Key)
 UserID (Foreign Key referencing Users table)
 ResourceID (Foreign Key referencing Resources table)
